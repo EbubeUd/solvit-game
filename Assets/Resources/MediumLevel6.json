@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "You can swallow me, but I can swallow you. What am I?",
+    "answer": "Water",
+    "wrongAnswer1": "Ice",
+    "wrongAnswer2": "No answer",
+    "wrongAnswer3": "Meat"
+  },
+
+  {
+    "question": "What asks but never answers?",
+    "answer": "A owl",
+    "wrongAnswer1": "A chicken",
+    "wrongAnswer2": "A dog",
+    "wrongAnswer3": "A teacher"
+  },
+
+  {
+    "question": "My first three letters stores things. Not many people understand me. What am I?",
+    "answer": "Binary",
+    "wrongAnswer1": "Puzzles",
+    "wrongAnswer2": "Riddles",
+    "wrongAnswer3": "Trashcan"
+  },
+
+  {
+    "question": "If you lose me, others around you may lose me too. What am I?",
+    "answer": "Temper",
+    "wrongAnswer1": "Money",
+    "wrongAnswer2": "Truth",
+    "wrongAnswer3": "Life"
+  }
+]

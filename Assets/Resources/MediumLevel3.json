@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I can't go right, i can't go left. I'm forever stuck going only up and down. What am I?",
+    "answer": "An elevator",
+    "wrongAnswer1": "A clock",
+    "wrongAnswer2": "A bouncing ball",
+    "wrongAnswer3": "A timer"
+  },
+
+  {
+    "question": "When I point up, it’s bright. When I point down, it’s dark. What am I?",
+    "answer": "A light switch",
+    "wrongAnswer1": "The sun",
+    "wrongAnswer2": "The moon",
+    "wrongAnswer3": "Torchlight"
+  },
+
+  {
+    "question": "I wave my hands at you, But I never say goodbye. You’re always cool with me, Even cooler when I’m high. What am I?",
+    "answer": "An electric fan",
+    "wrongAnswer1": "A cassava leaf",
+    "wrongAnswer2": "A palm",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "A necessity to some, a treasure to many, I’m best enjoyed among pleasant company. Some like me hot, some like me cold. Some prefer mild, some like me bold.",
+    "answer": "Coffee",
+    "wrongAnswer1": "Tea",
+    "wrongAnswer2": "Pap",
+    "wrongAnswer3": "Noodles"
+  }
+]

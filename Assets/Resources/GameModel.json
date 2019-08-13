@@ -1,0 +1,453 @@
+﻿{
+  "Math": {
+    "Easy": [
+      {
+        "Level": 1,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 2,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 3,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 4,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 5,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 6,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 7,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 8,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 9,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 10,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 11,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 12,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      }
+
+    ],
+    "Medium": [
+      {
+        "Level": 1,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 2,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 3,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 4,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 5,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 6,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 7,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 8,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 9,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 10,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 11,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 12,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      }
+    ],
+    "Hard": [
+        {
+          "Level": 1,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 2,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 3,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 4,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 5,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 6,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 7,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 8,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 9,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 10,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 11,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        },
+        {
+          "Level": 12,
+          "TotalStarsCount": 2,
+          "CoinsCollected": 0,
+          "IsUnlocked": true
+        }
+    ]
+  },
+  "Puzzle": {
+    "Easy": [
+      {
+        "Level": 1,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 2,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 3,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 4,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 5,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 6,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 7,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 8,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 9,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 10,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 11,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 12,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      }
+
+    ],
+    "Medium": [
+      {
+        "Level": 1,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 2,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 3,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 4,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 5,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 6,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 7,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 8,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 9,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 10,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 11,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 12,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      }
+    ],
+    "Hard": [
+      {
+        "Level": 1,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 2,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 3,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 4,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 5,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 6,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 7,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 8,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 9,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 10,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 11,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      },
+      {
+        "Level": 12,
+        "TotalStarsCount": 2,
+        "CoinsCollected": 0,
+        "IsUnlocked": true
+      }
+    ]
+  }
+}
+

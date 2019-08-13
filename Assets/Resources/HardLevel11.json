@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I am a ball that can be rolled, but never bounced or thrown. What am I?",
+    "answer": "Eyeball",
+    "wrongAnswer1": "Tennis ball",
+    "wrongAnswer2": "Basketball",
+    "wrongAnswer3": "golf ball"
+  },
+
+  {
+    "question": "I can be hot, I can be cold, I can run and I can be still, I can be hard and I can be soft. What am I?",
+    "answer": "Water",
+    "wrongAnswer1": "Pap",
+    "wrongAnswer2": "Tea",
+    "wrongAnswer3": "Noodle"
+  },
+
+  {
+    "question": "You find me once in the morning, twice in the afternoon but never in the evening. What am I?",
+    "answer": "Letter O",
+    "wrongAnswer1": "Sun",
+    "wrongAnswer2": "Lunch",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "I can fly but I am not a bird, I am colorful but I am not a rainbow, I am beautiful and social but I am not a person. What am I?",
+    "answer": "A butterfly",
+    "wrongAnswer1": "A peacock",
+    "wrongAnswer2": "Kite",
+    "wrongAnswer3": "Aeroplane"
+  }
+]

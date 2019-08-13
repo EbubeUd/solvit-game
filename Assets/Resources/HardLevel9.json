@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "A little boy goes shopping and purchases 12 tomatoes. On the way home, all but 9 get mushed and ruined. How many tomatoes are left in a good condition?",
+    "answer": "9",
+    "wrongAnswer1": "12",
+    "wrongAnswer2": "0",
+    "wrongAnswer3": "3"
+  },
+
+  {
+    "question": "If it took 6 people 9 hours to build a barn, how long would it take 12 people to build the same barn?",
+    "answer": "0",
+    "wrongAnswer1": "18",
+    "wrongAnswer2": "8",
+    "wrongAnswer3": "3"
+  },
+
+  {
+    "question": "If four men can build four tables in four hours, how many tables can eight men build in eight hours?",
+    "answer": "16",
+    "wrongAnswer1": "8",
+    "wrongAnswer2": "4",
+    "wrongAnswer3": "32"
+  },
+
+  {
+    "question": "There are 2 ants in front of 2 other ants, 2 ants behind 2 ants and 2 ants next to 2 ants. How many total ants are there?",
+    "answer": "4",
+    "wrongAnswer1": "12",
+    "wrongAnswer2": "10",
+    "wrongAnswer3": "8"
+  }
+]

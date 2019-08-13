@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "If you take my son’s age and multiply it by one and a half times his age you get 24. How old is my son?",
+    "answer": "4",
+    "wrongAnswer1": "8",
+    "wrongAnswer2": "12",
+    "wrongAnswer3": "2"
+  },
+
+  {
+    "question": "I am a father but I don’t have a child nor a wife. Who am I?",
+    "answer": "A priest",
+    "wrongAnswer1": "A widow",
+    "wrongAnswer2": "Father james",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "You are my sister but I am not your sister but somehow we are siblings. Who am I?",
+    "answer": "Your brother",
+    "wrongAnswer1": "Your step-sister",
+    "wrongAnswer2": "Your niece",
+    "wrongAnswer3": "Nobody"
+  },
+
+  {
+    "question": "Most people love me very much and can’t wait for my arrival once a year. You may even get mad at me for not giving you what you want. I often hang out at the mall. Who am I?",
+    "answer": "Santa",
+    "wrongAnswer1": "Your uncle",
+    "wrongAnswer2": "Your Teacher",
+    "wrongAnswer3": "Your aunt"
+  }
+]

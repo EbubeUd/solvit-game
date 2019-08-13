@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "How many lettetrs are in the word alphabet",
+    "answer": "8",
+    "wrongAnswer": "24",
+    "wrongAnswer2": "26",
+    "wrongAnswer3": "10"
+  },
+
+  {
+    "question": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+    "answer": "The letter M",
+    "wrongAnswer1": "Red moon",
+    "wrongAnswer2": "Earthquake",
+    "wrongAnswer3": "Volcano"
+  },
+
+  {
+    "question": "What is as big as you are and yet does not weigh anything?",
+    "answer": "Your shadow",
+    "wrongAnswer1": "A paper",
+    "wrongAnswer2": "Nothing",
+    "wrongAnswer3": ""
+  },
+
+  {
+    "question": "What can point in every direction but can't reach the destination by itself.",
+    "answer": "Your finger",
+    "wrongAnswer1": "A compass",
+    "wrongAnswer2": "A street sign",
+    "wrongAnswer3": "A clock"
+  }
+]

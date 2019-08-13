@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "This has wings but it cannot fly, it is big, tall and mighty, it runs fast and it is truly the king of the flock.",
+    "answer": "Ostrich",
+    "wrongAnswer1": "Dragon",
+    "wrongAnswer2": "Eagle",
+    "wrongAnswer3": "Cock"
+  },
+
+  {
+    "question": "I have no doors but I have keys, I have no rooms but I do have a space, you can enter but you can never leave. What am I?",
+    "answer": "Keyboard",
+    "wrongAnswer1": "Guitar",
+    "wrongAnswer2": "Cave",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "What do you find at the end of the line?",
+    "answer": "Letter E",
+    "wrongAnswer1": "Hook",
+    "wrongAnswer2": "Peg",
+    "wrongAnswer3": "Nothing"
+  },
+
+  {
+    "question": "What is the only 5 letter word that becomes larger when you add the letter “r” to it?",
+    "answer": "Large",
+    "wrongAnswer1": "Money",
+    "wrongAnswer2": "Short",
+    "wrongAnswer3": "No answer"
+  }
+]

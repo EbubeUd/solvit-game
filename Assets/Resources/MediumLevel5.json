@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "What’s nowhere but everywhere except where something is?",
+    "answer": "Nothing",
+    "wrongAnswer1": "Everything",
+    "wrongAnswer2": "Something",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "What goes in the water red and comes out black?",
+    "answer": "Iron",
+    "wrongAnswer1": "Fire",
+    "wrongAnswer2": "Firewood",
+    "wrongAnswer3": "Nothing"
+  },
+
+  {
+    "question": "I make you see the beauty of nature through colors, My name makes things weigh less and I have no weight at all. What am I?",
+    "answer": "Light",
+    "wrongAnswer1": "Fire",
+    "wrongAnswer2": "Rainbow",
+    "wrongAnswer3": "Phone"
+  },
+
+  {
+    "question": "Moving to and fro, Dancing all the time. Only to be moved by others to allow them to pass by.",
+    "answer": "A door",
+    "wrongAnswer1": "Masquerade",
+    "wrongAnswer2": "A dancer",
+    "wrongAnswer3": "A clown"
+  }
+]

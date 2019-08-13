@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+    "answer": "The letter M",
+    "wrongAnswer1": "Red moon",
+    "wrongAnswer2": "Earthquake",
+    "wrongAnswer3": "Volcano"
+  },
+
+  {
+    "question": "I am something people love or hate. I change peoples appearances and thoughts. If a person takes care of them self I will go up even higher. To some people I will fool them. To others I am a mystery. Some people might want to try and hide me but I will show. No matter how hard people try I will Never go down. What am I?",
+    "answer": "Age",
+    "wrongAnswer1": "Money",
+    "wrongAnswer2": "Makeup",
+    "wrongAnswer3": "Nothing"
+  },
+
+  {
+    "question": "I have hundreds of legs but I can only lean; You make me feel dirty so you feel clean. What am I?",
+    "answer": "A broom",
+    "wrongAnswer1": "A mop",
+    "wrongAnswer2": "A soap",
+    "wrongAnswer3": "Palm leaves"
+  },
+
+  {
+    "question": "I always follow you around, everywhere you go at night. I look very bright to people, but I can make the sun dark. I can be in many different forms and shapes. What am I?",
+    "answer": "Moon",
+    "wrongAnswer1": "Nightfly",
+    "wrongAnswer2": "Torchlight",
+    "wrongAnswer3": "No answer"
+  }
+]

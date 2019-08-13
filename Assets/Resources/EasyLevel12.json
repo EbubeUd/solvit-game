@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "They come out at night without being called, and are lost in the day without being stolen. What are they?",
+    "answer": "Stars",
+    "wrongAnswer1": "Bats",
+    "wrongAnswer2": "Ghosts",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "A monkey, a squirrel, and a bird are racing to the top of a coconut tree. Who will get the banana first, the monkey, the squirrel, or the bird?",
+    "answer": "None",
+    "wrongAnswer1": "Monkey",
+    "wrongAnswer2": "Squirrel",
+    "wrongAnswer3": "Bird"
+  },
+
+  {
+    "question": "Take off my skin, I won’t cry, but you will. What am I?",
+    "answer": "An onion",
+    "wrongAnswer1": "A snake",
+    "wrongAnswer2": "A dog",
+    "wrongAnswer3": "A lion"
+  },
+
+  {
+    "question": "What can you stick between a 3 and a 4 so that the result is more than three but less than four?",
+    "answer": "decimal",
+    "wrongAnswer1": "2",
+    "wrongAnswer2": "3",
+    "wrongAnswer3": "No answer"
+  }
+]

@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "Suppose you are visiting an island with knights who always tell the truth, knaves who always lie, and jokers who can do either. I am a Knave. Who  made the above statement?",
+    "answer": "A joker",
+    "wrongAnswer1": "A knight",
+    "wrongAnswer2": "A knave",
+    "wrongAnswer3": "Nobody"
+  },
+
+  {
+    "question": "Suppose you are visiting an island with knights who always tell the truth, knaves who always lie, and jokers who can do either.You meet three islanders named Ellis, Farin, and Gobi. They all know what the others are (a knight, knave or joker) and make the following statements: Ellis: Farin is a joker. Farin: Gobi is a joker. Gobi: Ellis is a joker. If exactly one of them is a joker, how many of them are knights?",
+    "answer": "One of them",
+    "wrongAnswer1": "None of them",
+    "wrongAnswer2": "Two of them",
+    "wrongAnswer3": "Three of them"
+  },
+
+  {
+    "question": "There are 3 boxes, exactly one of which has a car. You can keep the car if you pick the correct box! On each box there is a statement, exactly one of which is true. Box 1: The car is in this box. Box 2: The car is not in this box. Box 3: The car is not in box 1. Which box has the car?",
+    "answer": "Box 1",
+    "wrongAnswer1": "Box 2",
+    "wrongAnswer": "Box 3",
+    "wrongAnswer3": "None"
+  },
+
+  {
+    "question": "You have four closed boxes named: 'Apple', 'Banana', 'Carrots', 'Dates'.While you know all four types of food are inside and each box only contains one type of food, you also know that only one of the boxes is labeled correctly. What's the minimum number of boxes that you need to open to be guaranteed to find out which one is labeled correctly? (Note: Guaranteed means in all possible scenarios, so you can't assume one that is lucky.",
+    "answer": "2",
+    "wrongAnswer1": "1",
+    "wrongAnswer2": "3",
+    "wrongAnswer3": "4"
+  }
+]

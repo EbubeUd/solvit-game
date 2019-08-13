@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "What is placed on the table, cut and passed but never eaten?",
+    "answer": "Game cards",
+    "wrongAnswer1": "SPoilt cake",
+    "wrongAnswer2": "Poisoned cheese",
+    "wrongAnswer3": "Stale pizza"
+  },
+
+  {
+    "question": "What is black when it’s clean and white when it’s dirty?",
+    "answer": "A blackboard",
+    "wrongAnswer1": "A black shirt",
+    "wrongAnswer2": "Nothing",
+    "wrongAnswer3": "A white shirt"
+  },
+
+  {
+    "question": "What is made of wood but can’t be sawed?",
+    "answer": "Sawdust",
+    "wrongAnswer1": "Table",
+    "wrongAnswer2": "Chair",
+    "wrongAnswer3": "cupboard"
+  },
+
+  {
+    "question": "I love sugars and treats, I am a little critter and I sound a lot like your Mom and Dad’s sister. What am I?",
+    "answer": "An ant",
+    "wrongAnswer1": "A butterfly",
+    "wrongAnswer2": "A spider",
+    "wrongAnswer3": "A housefly"
+  }
+]

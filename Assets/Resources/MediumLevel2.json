@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I jump when I walk and sit when I stand. What am I?",
+    "answer": "A kangaroo",
+    "wrongAnswer1": "A dog",
+    "wrongAnswer2": "A tiger",
+    "wrongAnswer3": "A frog"
+  },
+
+  {
+    "question": "I am an insect. Half of my name is another insect. What am I?",
+    "answer": "Beetle",
+    "wrongAnswer1": "Housefly",
+    "wrongAnswer2": "Grasshopper",
+    "wrongAnswer3": "Mosquito"
+  },
+
+  {
+    "question": "How many bricks does it take to finish a brick building?",
+    "answer": "1",
+    "wrongAnswer1": "10",
+    "wrongAnswer2": "100",
+    "wrongAnswer3": "1000"
+  },
+
+  {
+    "question": "I’m rarely touched but often held and if you’re wise you’ll use me well. What am I?",
+    "answer": "Tongue",
+    "wrongAnswer1": "Money",
+    "wrongAnswer2": "Love",
+    "wrongAnswer3": "Advice"
+  }
+]

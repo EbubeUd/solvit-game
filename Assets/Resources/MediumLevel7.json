@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I grow in trees, eat living things but have no teeth and give birth to something that looks nothing like me. What am I?",
+    "answer": "A bird",
+    "wrongAnswer1": "A snake",
+    "wrongAnswer2": "Lizard",
+    "wrongAnswer3": "An insect"
+  },
+
+  {
+    "question": "I have three letters. Cut one off and I become stronger. Cut two off and I become ten. What am I?",
+    "answer": "Fox",
+    "wrongAnswer1": "Two",
+    "wrongAnswer2": "Pot",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "I have two hands but I cannot clap. What am I?",
+    "answer": "A clock",
+    "wrongAnswer1": "Chicken",
+    "wrongAnswer2": "Kangaroo",
+    "wrongAnswer3": "A dead man"
+  },
+
+  {
+    "question": "Anyone can take it as long as it’s on someone.",
+    "answer": "Pity",
+    "wrongAnswer1": "Money",
+    "wrongAnswer2": "Blame",
+    "wrongAnswer3": "Nothing"
+  }
+]

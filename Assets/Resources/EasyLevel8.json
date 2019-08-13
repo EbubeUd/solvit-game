@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I have no life, but i can die, what am I?",
+    "answer": "A battery",
+    "wrongAnswer1": "Fire",
+    "wrongAnswer2": "A ghost",
+    "wrongAnswer3": "Wood"
+  },
+
+  {
+    "question": "I have rivers, but do not have water. I have dense forests, but no trees and animals. I have cities, but no people live in those cities. What am I?",
+    "answer": "A map",
+    "wrongAnswer1": "No answer",
+    "wrongAnswer2": "A book",
+    "wrongAnswer3": "A movie"
+  },
+
+  {
+    "question": "I never ask questions, but always answered. What am I?",
+    "answer": "A doorbell",
+    "wrongAnswer1": "A Teacher",
+    "wrongAnswer2": "A phone",
+    "wrongAnswer3": "A Genius"
+  },
+
+  {
+    "quesstion": "I was born big, but as the day passes, as I get older, I become small. What am I?",
+    "answer": "A candle",
+    "wrongAnswer1": "A chewing stick",
+    "wrongAnswer2": "A yam",
+    "wrongAnswer3": "FireWood"
+  }
+]

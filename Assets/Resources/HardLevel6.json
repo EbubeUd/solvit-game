@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I am the enemy of all that is good and right. Five letters--that is the length of my name. Remove the first and evil I remain.",
+    "answer": "Devil",
+    "wrongAnswer1": "Satan",
+    "wrongAnswer2": "Ghost",
+    "wrongAnswer3": "Alien"
+  },
+
+  {
+    "question": "What 4-letter word can be written forward, backward or upside down, and can still be read from left to right?",
+    "answer": "NOON",
+    "wrongAnswer1": "BOOM",
+    "wrongAnswer2": "GANG",
+    "wrongAnswer3": "SONG"
+  },
+
+  {
+    "question": "You should keep me as straight as can be, yet very few do. Most of the time I am slightly bent or curved. Your sadness usually causes me to bend further, but don’t bend me for too long or I may never be able to fully straighten out again. What am I?",
+    "answer": " Your Posture",
+    "wrongAnswer1": "Your cloth",
+    "wrongAnswer2": "",
+    "wrongAnswer3": "Plastic"
+  },
+
+  {
+    "question": "Each day many people from all over the world come and visit me, however they usually only stay for a few minutes. I am considered by many to be very dirty yet few people would want to live without me. And, whenever people come see me, they reveal to me a part of themselves that they rarely show to others. What or who am I?",
+    "answer": "A toilet",
+    "wrongAnswer1": "Kitchen",
+    "wrongAnswer2": "Mecca",
+    "wrongAnswer3": "Bathroom"
+  }
+]

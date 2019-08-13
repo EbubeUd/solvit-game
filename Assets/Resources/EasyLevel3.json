@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "When you have me, you immediately feel like sharing me. But, if you do share me, you do not have me.",
+    "answer": "A secret",
+    "wrongAnswer1": "Food",
+    "wrongAnswer2": "Money",
+    "wrongAnswer3": "BestFriend"
+  },
+
+  {
+    "question": "Imagine that you are in a boat, in the middle of the sea. Suddenly, you are surrounded by hungry sharks, just waiting to feed on you. How can you put an end to this?",
+    "answer": "Stop Imagining",
+    "wrongAnswer1": "Swim",
+    "wrongAnswer2": "Kill the sharks",
+    "wrongAnswer3": "Speed up the boat"
+  },
+
+  {
+    "question": "Jimmy’s mother had four children. She named the first Monday. She named the second Tuesday, and she named the third Wednesday. What is the name of the fourth child?",
+    "answer": "Jimmy",
+    "wrongAnswer1": "Thursday",
+    "wrongAnswer2": "Friday",
+    "wrongAnswer3": "Sunday"
+  },
+
+  {
+    "question": "In a year, there are 12 months. Seven months have 31 days. How many months have 28 days?",
+    "answer": "All",
+    "wrongAnswer1": "One",
+    "wrongAnswer2": "Four",
+    "wrongAmswer3": "Two"
+  }
+]

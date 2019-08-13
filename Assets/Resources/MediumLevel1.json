@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I am one in China, two in Indonesia, three in the Philippines, none in Japan. What am I?",
+    "answer": "The letter i",
+    "wrongAnswer1": "Airplane",
+    "wrongAnswer2": "Cars",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "I live on land but in a tree. What am I",
+    "answer": "A bird",
+    "wrongAnswe1": "A monkey",
+    "wrongAnswer2": "An insect",
+    "wrongAnswer3": "Nothing"
+  },
+
+  {
+    "question": "I have three eyes but cannot see. What am I?",
+    "answer": "Traffic light",
+    "wrongAnswer1": "A ghost",
+    "wrongAnswer2": "Tuatara",
+    "wrongAnswer3": "No answer"
+  },
+
+  {
+    "question": "Two handsome racers are having a race. One keeps lapping the other and the race never ends. What am I?",
+    "answer": "A clock",
+    "wrongAnswer1": "White horse",
+    "wrongAnswer2": "Black horse",
+    "wrongAnswer3": "Sun and Earth"
+  }
+]

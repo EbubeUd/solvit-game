@@ -1,0 +1,33 @@
+﻿[
+  {
+    "question": "I don’t have eyes, ears, nose and tongue, but I can see, smell, hear and taste everything. What am I?",
+    "answer": "A brain",
+    "wrongAnswer1": "A ghost",
+    "wrongAnswer2": "No answer",
+    "wrongAnswer3": "An alien"
+  },
+
+  {
+    "question": "I do not have wings, but I can fly. I don’t have eyes, but I will cry! What am I?",
+    "answer": "A cloud",
+    "wrongAnswer1": "A Tortoise",
+    "wrongAnswer2": "A Bat",
+    "wrongAnswer3": "A Kite"
+  },
+
+  {
+    "question": "I do not speak, cannot hear or speak anything, but I will always tell the truth. What am I?",
+    "answer": "A mirror",
+    "wrongAnswer1": "A deaf and dumb",
+    "wrongAnswer2": "Water",
+    "wrongAnswer3": "Fire"
+  },
+
+  {
+    "question": "I have no legs. I will never walk, but always run. What am I?",
+    "answer": "A River",
+    "wrongAnswer1": "A Snake",
+    "wrongAnswer2": "A Tap",
+    "wrongAnswer3": "No Answer"
+  }
+]
