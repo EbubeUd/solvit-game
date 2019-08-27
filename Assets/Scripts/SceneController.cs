@@ -13,6 +13,7 @@ namespace Assets.Scripts
 
         public Button startGameButton;
         public Button exitButton;
+        public Button cancelExitButton;
         public Button yesButton;
         public Button noButton;
         public Button goBackToMainPanelButton;
@@ -36,10 +37,8 @@ namespace Assets.Scripts
         public Button level11Button;
         public Button level12Button;
 
-       
-
-        public Toggle beginner;
-        public Toggle advanced;
+        public Button mediumLevel1Button;
+        public Button hardLevel1Button;
 
         public Text text;
 
@@ -66,37 +65,9 @@ namespace Assets.Scripts
         public GameObject mediumPanel;
         public GameObject hardPanel;
 
-        public GameObject lvl1GoldStar;
-        public GameObject lvl2GoldStar;
-        public GameObject lvl3GoldStar;
-        public GameObject lvl4GoldStar;
-        public GameObject lvl5GoldStar;
-        public GameObject lvl6GoldStar;
-        public GameObject lvl7GoldStar;
-        public GameObject lvl8GoldStar;
-        public GameObject lvl9GoldStar;
-        public GameObject lvl10GoldStar;
-        public GameObject lvl11GoldStar;
-        public GameObject lvl12GoldStar;
-
-        public GameObject padlockImage2;
-        public GameObject padlockImage3;
-        public GameObject padlockImage4;
-        public GameObject padlockImage5;
-        public GameObject padlockImage6;
-        public GameObject padlockImage7;
-        public GameObject padlockImage8;
-        public GameObject padlockImage9;
-        public GameObject padlockImage10;
-        public GameObject padlockImage11;
-        public GameObject padlockImage12;
-
         public GameObject easyHeader;
         public GameObject mediumHeader;
         public GameObject hardHeader;
-
-        private bool isAdvanced;
-        private bool isBeginner;
 
         public void Start()
         {
@@ -116,48 +87,6 @@ namespace Assets.Scripts
         {
             //UpdateMainPanel();
         }
-
-        //public void OnBeginnerEnter(bool Value)
-        //{
-        //    isBeginner = Value;
-        //    if (Value && !isAdvanced)
-        //    {
-        //        text.text = "Beginner";
-        //    }
-        //    else if(Value && isAdvanced)
-        //    {
-        //        text.text = "Advanced";
-        //    }
-        //    else if (!Value && isAdvanced)
-        //    {
-        //        text.text = "Advanced";
-        //    }
-        //    else
-        //    {
-        //        text.text = "";
-        //    }          
-        //}
-
-        //public void OnAdvancedEnter(bool value)
-        //{
-        //    isAdvanced = value;
-        //    if (value && !isBeginner)
-        //    {
-        //        text.text = "Advanced";
-        //    }
-        //    else if (value && isBeginner)
-        //    {
-        //        text.text = "Advanced";
-        //    }
-        //    else if (!value && isBeginner)
-        //    {
-        //        text.text = "Beginner";
-        //    }
-        //    else
-        //    {
-        //        text.text = "";
-        //    }          
-        //}
 
         public void StartGame()
         {
@@ -251,6 +180,7 @@ namespace Assets.Scripts
             else if (PlayerManager.difficulties == EnumBase.Difficulties.medium)
             {
                 SceneManager.LoadScene(13);
+                Debug.Log(PlayerManager.level);
             }
             else if (PlayerManager.difficulties == EnumBase.Difficulties.hard)
             {
@@ -332,7 +262,7 @@ namespace Assets.Scripts
             mediumHeader.SetActive(true);
             hardHeader.SetActive(false);
             chooseDifficultyPanel.SetActive(false);
-            easyPanel.SetActive(true);
+            mediumPanel.SetActive(true);
         }
 
         public void ActivateHardHeader()
@@ -343,87 +273,8 @@ namespace Assets.Scripts
             mediumHeader.SetActive(false);
             hardHeader.SetActive(true);
             chooseDifficultyPanel.SetActive(false);
-            easyPanel.SetActive(true);
+            hardPanel.SetActive(true);
         }
-
-        //public void UpdateMainPanel()
-        //{
-        //    if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 1)
-        //    {
-        //        lvl1GoldStar.SetActive(true);
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 2)
-        //    {
-        //        lvl2GoldStar.SetActive(true);
-        //        padlockImage2.SetActive(false);
-        //        level2Text.text = "2";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 3)
-        //    {
-        //        lvl3GoldStar.SetActive(true);
-        //        padlockImage3.SetActive(false);
-        //        level3Text.text = "3";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 4)
-        //    {
-        //        lvl4GoldStar.SetActive(true);
-        //        padlockImage4.SetActive(false);
-        //        level4Text.text = "4";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 5)
-        //    {
-        //        lvl5GoldStar.SetActive(true);
-        //        padlockImage5.SetActive(false);
-        //        level5Text.text = "5";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 6)
-        //    {
-        //        lvl1GoldStar.SetActive(true);
-        //        padlockImage6.SetActive(false);
-        //        level6Text.text = "6";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 7)
-        //    {
-        //        lvl1GoldStar.SetActive(true);
-        //        padlockImage7.SetActive(false);
-        //        level7Text.text = "7";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 8)
-        //    {
-        //        lvl8GoldStar.SetActive(true);
-        //        padlockImage8.SetActive(false);
-        //        level8Text.text = "8";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 9)
-        //    {
-        //        lvl1GoldStar.SetActive(true);
-        //        padlockImage9.SetActive(false);
-        //        level9Text.text = "9";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 10)
-        //    {
-        //        lvl10GoldStar.SetActive(true);
-        //        padlockImage10.SetActive(false);
-        //        level10Text.text = "10";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 11)
-        //    {
-        //        lvl11GoldStar.SetActive(true);
-        //        padlockImage11.SetActive(false);
-        //        level11Text.text = "11";
-        //    }
-        //    else if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups && PlayerManager.level == 12)
-        //    {
-        //        lvl12GoldStar.SetActive(true);
-        //        padlockImage12.SetActive(false);
-        //        level12Text.text = "12";
-        //    }
-        //    else
-        //    {
-        //        return;
-        //    }
-        //}
-
 
 
         public void AssignButtons()
@@ -432,6 +283,7 @@ namespace Assets.Scripts
             exitButton.onClick.AddListener(delegate { DisplayExitPanel(); });
             yesButton.onClick.AddListener(delegate { ExitGame(); });
             noButton.onClick.AddListener(delegate { DontExitGame(); });
+            cancelExitButton.onClick.AddListener(delegate { DontExitGame(); });
             //goBackToMainPanelButton.onClick.AddListener(delegate { GoBackToMainPanel(); });
             //mathsButton.onClick.AddListener(delegate { ChooseMathsDifficulty(); });
             //puzzleButton.onClick.AddListener(delegate { ChoosePuzzleDifficulty(); });
@@ -449,6 +301,8 @@ namespace Assets.Scripts
             //newGameButton.onClick.AddListener(delegate { ChooseGameState(); });
 
             level1Button.onClick.AddListener(delegate { LoadLevel(); });
+            mediumLevel1Button.onClick.AddListener(delegate { LoadLevel(); });
+            hardLevel1Button.onClick.AddListener(delegate { LoadLevel(); });
         }
      }
 }

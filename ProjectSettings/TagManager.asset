@@ -15,6 +15,10 @@ TagManager:
   - Enemy
   - AnimatedTile
   - Empty
+  - TokenSlider
+  - TokenSliderText
+  - CoinSlider
+  - CoinSliderText
   layers:
   - Default
   - TransparentFX

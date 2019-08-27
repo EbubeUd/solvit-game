@@ -15,7 +15,7 @@ namespace Assets.Scripts
 
         public AudioSource sound;
 
-        public int currentLevelTotalNumberOfPickups;
+        //public int currentLevelTotalNumberOfPickups;
         public static int scene;
         public Button pauseButton;
         public Button resumeButton;
@@ -28,48 +28,24 @@ namespace Assets.Scripts
         public Button exitButton;
         public Button dontExitButton;
         public Button menuButton;
-        public Button menuOnPause;
         public Button settingInPause;
+        public Button closeExitPanelButton;
+        //public Button nextLevelButton;
 
         public Button RestartOnLevelFinish;
 
-        public Button answerButton;
-        public Button wrongButton1;
-        public Button wrongButton2;
-        public Button wrongButton3;
-        public Button proceedButton;
-        public Button previousButton;
-        public Button OptionBtn1;
-        public Button OptionBtn2;
-        public Button OptionBtn3;
-        public Button settingButton;
-        public Button resumeSettings;
-        public Button quitFromSettings;
+        public Button backToPausePanel;
 
         public GameObject door;
-        public GameObject questionPanel;
-        public GameObject panel;
-        public GameObject correctPanel;
-        public GameObject inCorrectPanel;
-        public GameObject gameOverPanel;
         public GameObject exitPanel;
         public GameObject pausePanel;
-        public GameObject questionBackground;
         public GameObject GameFinishPanel;
         public GameObject starLeft;
         public GameObject starCenter;
         public GameObject starRight;
-        public GameObject correctTtext;
-        public GameObject correctPuzzleText;
-        public GameObject puzzleCorrectPanel;
-        public GameObject puzzleIncorrectPanel;
-        public GameObject innerPuzzlePanel;
-        public GameObject puzzleQuestionPanel;
-        public GameObject puzzleQuestionBackground;
+        public GameObject gameOverPanel;
         public GameObject SettingPanel;
 
-        public Text question;
-        public Text questionHeader;
         public Text explanationHeader;
         public Text gameOverHighScore;
         public Text gameFinishHighScore;
@@ -79,10 +55,11 @@ namespace Assets.Scripts
 
         public void Awake()
         {
-            scene = SceneManager.GetActiveScene().buildIndex;
+            
             if (instance == null)
             {
                 instance = this;
+                scene = SceneManager.GetActiveScene().buildIndex;
             }
 
             
@@ -92,7 +69,7 @@ namespace Assets.Scripts
             AssignButtonEvents();
             coinManager = GetComponent<CoinManager>();
 
-            PlayerManager.instance.rigidBody.gravityScale = 3f;
+            //PlayerManager.instance.rigidBody.gravityScale = 3f;
             AudioManager.instance.backgroundMusic.Play();
 
         }
@@ -110,7 +87,6 @@ namespace Assets.Scripts
 
         public void ResumeFromSettings()
         {
-            Time.timeScale = 1;
             SettingPanel.SetActive(false);
         }
 
@@ -136,6 +112,16 @@ namespace Assets.Scripts
             {
                 Time.timeScale = 1;
             }
+
+            if (GameFinishPanel.activeInHierarchy)
+            {
+                GameFinishPanel.SetActive(false);
+            }
+            else if (gameOverPanel.activeInHierarchy)
+            {
+                gameOverPanel.SetActive(false);
+            }
+            
             isGamePaused = false;
             TimeManager.countDownTime = 299;
             PlayerManager.maxAnswerInput = 2;
@@ -148,6 +134,7 @@ namespace Assets.Scripts
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
             PlayerManager.instance.animator.SetBool("Hurt", false);
+            EnnemyManager.speed = 5.0f;
             //OptionBtn1.onClick.AddListener(delegate { PlayerManager.instance.CheckSolution(PlayerManager.instance.reshuffledOptions[0]); });
             //OptionBtn2.onClick.AddListener(delegate { PlayerManager.instance.CheckSolution(PlayerManager.instance.reshuffledOptions[1]); });
             //OptionBtn3.onClick.AddListener(delegate { PlayerManager.instance.CheckSolution(PlayerManager.instance.reshuffledOptions[2]); });
@@ -174,10 +161,6 @@ namespace Assets.Scripts
 
         public void DontExitGame()
         {
-            if (Time.timeScale == 0)
-            {
-                Time.timeScale = 1;
-            }
             exitPanel.SetActive(false);
             //pausePanel.SetActive(true);
         }
@@ -188,20 +171,9 @@ namespace Assets.Scripts
             SettingPanel.SetActive(true);
         }
 
-        public void QuitFromSettings()
-        {
-            //SettingPanel.SetActive(false);
-            exitPanel.SetActive(true);
-        }
-
-        public void DontQuitFromSettings()
-        {
-            exitPanel.SetActive(false);
-            SettingPanel.SetActive(true);
-        }
-
         public void LoadMainMenu()
         {
+            gameOverPanel.SetActive(false);
             if (Time.timeScale == 0)
             {
                 Time.timeScale = 1;
@@ -210,7 +182,8 @@ namespace Assets.Scripts
             TimeManager.countDownTime = 299;
             PlayerManager.maxAnswerInput = 2;
             CoinManager.totalNumberOfPickupsCollected = 0;
-            PlayerManager.instance.player.transform.position = new Vector2(-10, -1.410966f);
+            PlayerManager.instance.playerRoot.transform.position = new Vector2(-10, -1.410966f);
+            PlayerManager.instance.transform.position = new Vector2(-10, -1.410966f);
             PlayerManager.instance.animationMode = EnumBase.AnimationMode.idle;
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
@@ -219,12 +192,14 @@ namespace Assets.Scripts
             SceneManager.LoadScene(0);
             PlayerManager.instance.rigidBody.gravityScale = 0f;
 
-            SceneController.instance.startGameButton.onClick.AddListener(delegate { SceneController.instance.StartGame(); });
-            SceneController.instance.exitButton.onClick.AddListener(delegate { SceneController.instance.DisplayExitPanel(); });
+            //SceneController.instance.startGameButton.onClick.AddListener(delegate { SceneController.instance.StartGame(); });
+            //SceneController.instance.exitButton.onClick.AddListener(delegate { SceneController.instance.DisplayExitPanel(); });
         }
 
         public void LoadLevel2()
         {
+            GameFinishPanel.SetActive(false);
+
             CoinManager.totalNumberOfPickupsCollected = 0;
             TimeManager.countDownTime = 299;
             SceneManager.LoadScene(2);
@@ -236,10 +211,12 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel3()
         {
+            //GameFinishPanel.SetActive(false);
             CoinManager.totalNumberOfPickupsCollected = 0;
             TimeManager.countDownTime = 299;
             SceneManager.LoadScene(3);
@@ -251,6 +228,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel4()
@@ -266,6 +244,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel5()
@@ -281,6 +260,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel6()
@@ -296,6 +276,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel7()
@@ -311,6 +292,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel8()
@@ -326,6 +308,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel9()
@@ -341,6 +324,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel10()
@@ -356,6 +340,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel11()
@@ -371,6 +356,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel12()
@@ -386,6 +372,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel13()
@@ -401,6 +388,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel14()
@@ -416,6 +404,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel15()
@@ -431,6 +420,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel16()
@@ -446,6 +436,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel17()
@@ -461,6 +452,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel18()
@@ -476,6 +468,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel19()
@@ -491,6 +484,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel20()
@@ -506,6 +500,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel21()
@@ -521,6 +516,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel22()
@@ -536,6 +532,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel23()
@@ -551,6 +548,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel24()
@@ -566,6 +564,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel25()
@@ -581,6 +580,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel26()
@@ -596,6 +596,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel27()
@@ -611,6 +612,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel28()
@@ -626,6 +628,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel29()
@@ -641,6 +644,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel30()
@@ -656,6 +660,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel31()
@@ -671,6 +676,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel32()
@@ -686,6 +692,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel33()
@@ -701,6 +708,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel34()
@@ -716,6 +724,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel35()
@@ -731,6 +740,7 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
         }
 
         public void LoadLevel36()
@@ -746,6 +756,54 @@ namespace Assets.Scripts
             PlayerManager.instance.canJump = true;
             PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
             PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
+        }
+
+        // Reset the value and Text of the Token and Coin Panel
+        public void ResetPickupPanel()
+        {
+            GameObject tokenSliderFinder = GameObject.Find("TokenSlider");
+            GameObject coinSliderFinder = GameObject.Find("CoinSlider");
+            GameObject textFinder = GameObject.Find("TokenSliderText");
+            GameObject coinTextFinder = GameObject.Find("CoinSliderText");
+
+            Slider tokenSlider = tokenSliderFinder.GetComponent<Slider>();
+            tokenSlider.value = 0;
+
+            Text toks = tokenSlider.GetComponentInChildren<Text>();
+            toks.text = "0/2";
+
+            Slider coinSlider = coinSliderFinder.GetComponent<Slider>();
+            coinSlider.value = 0;
+
+            Text coins = coinSlider.GetComponentInChildren<Text>();
+            coins.text = "0%";
+        }
+
+        public void LoadLevel(int LevelIndex)
+        {
+            ResetPickupPanel();
+            GameFinishPanel.SetActive(false);
+            CoinManager.totalNumberOfPickupsCollected = 0;
+            TimeManager.countDownTime = 299;
+            TimeManager.instance.Start();
+            SceneManager.LoadScene(LevelIndex);
+
+            int currentLevel = LevelIndex;
+            if (currentLevel >12)
+            {
+                currentLevel = 1;
+            }
+            PlayerManager.level = currentLevel;
+            PlayerManager.maxAnswerInput = 2;
+            AudioManager.instance.backgroundMusic.Play();
+            PlayerManager.instance.player.transform.position = new Vector2(-10, 0);
+            PlayerManager.instance.animationMode = EnumBase.AnimationMode.idle;
+            PlayerManager.instance.canJump = true;
+            PlayerManager.instance.animator.SetFloat("Speed", Mathf.Abs(PlayerManager.instance.horizontalMove));
+            PlayerManager.instance.runSpeed = 50f;
+            EnnemyManager.speed = 5.0f;
+            LevelLoader.scene = LevelIndex;
         }
 
         //public void LoadLevel2()
@@ -771,13 +829,12 @@ namespace Assets.Scripts
             quitButton2.onClick.AddListener(delegate { DisplayExitPromptPanel(); });
             exitButton.onClick.AddListener(delegate { ExitGame(); });
             dontExitButton.onClick.AddListener(delegate { DontExitGame(); });
+            closeExitPanelButton.onClick.AddListener(delegate { DontExitGame(); });
             mainMenuButton.onClick.AddListener(delegate { LoadMainMenu(); });
             menuButton.onClick.AddListener(delegate { LoadMainMenu(); });
-            menuOnPause.onClick.AddListener(delegate { LoadMainMenu(); });
-            settingButton.onClick.AddListener(delegate { OPenSettingPanel(); });
-            resumeSettings.onClick.AddListener(delegate { ResumeFromSettings(); });
-            quitFromSettings.onClick.AddListener(delegate { QuitFromSettings(); });
+            backToPausePanel.onClick.AddListener(delegate { ResumeFromSettings(); });
             settingInPause.onClick.AddListener(delegate { OPenSettingPanel(); });
+            //nextLevelButton.onClick.AddListener(delegate { LoadNextlevel(); });
         }
 
         

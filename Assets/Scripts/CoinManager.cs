@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Assets.Scripts
@@ -24,12 +25,24 @@ namespace Assets.Scripts
 
         public GameObject pickUp;
        
+        public static EnumBase.Pickups pickUps;
 
-        public EnumBase.Pickups pickUps;
+        public void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+        }
 
         public void Start()
         {
             player = GetComponent<PlayerManager>();
+        }
+
+        public void Update()
+        {
+            
         }
 
         public void CollectCoin()
@@ -39,6 +52,17 @@ namespace Assets.Scripts
                 return;
             }
             hasCollided = true;
+
+            // set the current enum
+            if (pickUp.CompareTag("Token"))
+            {
+                pickUps = EnumBase.Pickups.token;
+            }
+            else if (pickUp.CompareTag("Coin"))
+            {
+                pickUps = EnumBase.Pickups.coin;
+            }
+
             switch (pickUps)
             {
                 case EnumBase.Pickups.token:

@@ -2415,7 +2415,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 16470957}
-  pickUps: 2
 --- !u!58 &16470960
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4057,7 +4056,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 51479289}
-  pickUps: 2
 --- !u!58 &51479292
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7076,7 +7074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &134022378
 Transform:
   m_ObjectHideFlags: 0
@@ -7087,7 +7085,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1674606016}
+  - {fileID: 737340583}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10583,7 +10581,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 224504134}
-  pickUps: 2
 --- !u!58 &224504137
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11268,7 +11265,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 240167165}
-  pickUps: 2
 --- !u!58 &240167168
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11422,7 +11418,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &242991937
 GameObject:
@@ -11680,7 +11676,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 247640852}
-  pickUps: 2
 --- !u!58 &247640855
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12842,7 +12837,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 281922652}
-  pickUps: 2
 --- !u!58 &281922655
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13636,7 +13630,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 299524695}
-  pickUps: 2
 --- !u!58 &299524698
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13843,7 +13836,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 301060790}
-  pickUps: 2
 --- !u!58 &301060793
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15135,7 +15127,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15681,7 +15673,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 348715214}
-  pickUps: 2
 --- !u!58 &348715217
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15969,7 +15960,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 350723885}
-  pickUps: 2
 --- !u!58 &350723888
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18365,7 +18355,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 400613117}
-  pickUps: 2
 --- !u!58 &400613120
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18952,7 +18941,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 413833852}
-  pickUps: 2
 --- !u!58 &413833855
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19962,7 +19950,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &445661550
 GameObject:
@@ -20628,7 +20616,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 456792757}
-  pickUps: 2
 --- !u!58 &456792760
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22093,7 +22080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &481277317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22474,7 +22461,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 486025987}
-  pickUps: 2
 --- !u!58 &486025990
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23867,7 +23853,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 524583687}
-  pickUps: 2
 --- !u!58 &524583690
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24150,7 +24135,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 525647001}
-  pickUps: 2
 --- !u!58 &525647004
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24798,7 +24782,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 533880301}
-  pickUps: 2
 --- !u!58 &533880304
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25262,7 +25245,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 543026798}
-  pickUps: 2
 --- !u!58 &543026801
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25939,7 +25921,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 556616757}
-  pickUps: 2
 --- !u!58 &556616760
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28817,7 +28798,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 617335466}
-  pickUps: 2
 --- !u!58 &617335469
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29355,7 +29335,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 626560427}
-  pickUps: 2
 --- !u!58 &626560430
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29714,7 +29693,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 631199583}
-  pickUps: 2
 --- !u!58 &631199586
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -35417,6 +35395,191 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &737340582
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 134022378}
+    m_Modifications:
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.016076
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.1672976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896823120215484, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: rigidBody
+      value: 
+      objectReference: {fileID: 737340585}
+    - target: {fileID: 1866951466693424, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896823120215484, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 737340584}
+    - target: {fileID: 4416263013033858, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 15.63291
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 16.460379
+      objectReference: {fileID: 0}
+    - target: {fileID: 82943229342709184, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114778250345559022, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_JumpForce
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 212409496313262222, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 51dca4bac77efe340b7f80a768a80b99,
+        type: 3}
+    - target: {fileID: 58223654366736762, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 61460252749210334, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 61460252749210334, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 58223654366736762, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 58223654366736762, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61460252749210334, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016746009115110, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 61460252749210334, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61460252749210334, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e68466db6f5816d4abc9233bd8c4cefe, type: 2}
+    - target: {fileID: 58223654366736762, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 114778250345559022, guid: 4b38151e811560f43a0bca8d4291df17,
+        type: 2}
+      propertyPath: m_CrouchDisableCollider
+      value: 
+      objectReference: {fileID: 737340586}
+    m_RemovedComponents:
+    - {fileID: 61460252749210334, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+    - {fileID: 58223654366736762, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 4b38151e811560f43a0bca8d4291df17, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &737340583 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4089226307631528, guid: 4b38151e811560f43a0bca8d4291df17,
+    type: 2}
+  m_PrefabInternal: {fileID: 737340582}
+--- !u!1 &737340584 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1866951466693424, guid: 4b38151e811560f43a0bca8d4291df17,
+    type: 2}
+  m_PrefabInternal: {fileID: 737340582}
+--- !u!50 &737340585 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50384417344405036, guid: 4b38151e811560f43a0bca8d4291df17,
+    type: 2}
+  m_PrefabInternal: {fileID: 737340582}
+--- !u!70 &737340586
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737340584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: 0.05}
+  m_Size: {x: 0.15, y: 0.6}
+  m_Direction: 0
+--- !u!58 &737340587
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737340584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.295}
+  serializedVersion: 2
+  m_Radius: 0.07
 --- !u!1 &738829151
 GameObject:
   m_ObjectHideFlags: 0
@@ -35746,7 +35909,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &743504121
 GameObject:
@@ -38145,7 +38308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &794171638
 Transform:
   m_ObjectHideFlags: 0
@@ -38238,7 +38401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1221399681}
-  currentLevelTotalNumberOfPickups: 38
   pauseButton: {fileID: 1953982326}
   resumeButton: {fileID: 1004207701}
   mainMenuButton: {fileID: 1595098791}
@@ -38250,44 +38412,19 @@ MonoBehaviour:
   exitButton: {fileID: 551205368}
   dontExitButton: {fileID: 308354136}
   menuButton: {fileID: 477977281}
-  menuOnPause: {fileID: 9059544}
   settingInPause: {fileID: 774603906}
+  closeExitPanelButton: {fileID: 0}
   RestartOnLevelFinish: {fileID: 657994817}
-  answerButton: {fileID: 9059526}
-  wrongButton1: {fileID: 9059525}
-  wrongButton2: {fileID: 9059523}
-  wrongButton3: {fileID: 9059519}
-  proceedButton: {fileID: 0}
-  previousButton: {fileID: 0}
-  OptionBtn1: {fileID: 9059532}
-  OptionBtn2: {fileID: 9059531}
-  OptionBtn3: {fileID: 9059530}
-  settingButton: {fileID: 631338822}
-  resumeSettings: {fileID: 290863764}
-  quitFromSettings: {fileID: 1938035}
+  backToPausePanel: {fileID: 0}
   door: {fileID: 0}
-  questionPanel: {fileID: 9059542}
-  panel: {fileID: 9059541}
-  correctPanel: {fileID: 9059540}
-  inCorrectPanel: {fileID: 9059539}
-  gameOverPanel: {fileID: 1498900802}
   exitPanel: {fileID: 157052492}
   pausePanel: {fileID: 586938401}
-  questionBackground: {fileID: 9059538}
   GameFinishPanel: {fileID: 584296959}
   starLeft: {fileID: 333304651}
   starCenter: {fileID: 185510522}
   starRight: {fileID: 180319879}
-  correctTtext: {fileID: 9059533}
-  correctPuzzleText: {fileID: 9059521}
-  puzzleCorrectPanel: {fileID: 9059522}
-  puzzleIncorrectPanel: {fileID: 9059520}
-  innerPuzzlePanel: {fileID: 9059524}
-  puzzleQuestionPanel: {fileID: 9059527}
-  puzzleQuestionBackground: {fileID: 9059528}
+  gameOverPanel: {fileID: 1498900802}
   SettingPanel: {fileID: 366981960}
-  question: {fileID: 383406412}
-  questionHeader: {fileID: 1048592604}
   explanationHeader: {fileID: 0}
   gameOverHighScore: {fileID: 2059934946}
   gameFinishHighScore: {fileID: 1666607808}
@@ -45823,7 +45960,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 993053464}
-  pickUps: 2
 --- !u!58 &993053467
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46854,7 +46990,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1018731538}
-  pickUps: 2
 --- !u!58 &1018731541
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48021,7 +48156,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -0.0000038147, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -51232,7 +51367,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1133545332}
-  pickUps: 2
 --- !u!58 &1133545335
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -52169,7 +52303,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1163330022}
-  pickUps: 2
 --- !u!58 &1163330025
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -54599,7 +54732,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1218660199}
-  pickUps: 2
 --- !u!58 &1218660202
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -55192,7 +55324,6 @@ MonoBehaviour:
   slider: {fileID: 1737094562}
   sliderText: {fileID: 485710543}
   pickUp: {fileID: 1241232339}
-  pickUps: 1
 --- !u!61 &1241232342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56478,7 +56609,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1267522846}
-  pickUps: 2
 --- !u!58 &1267522849
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -57202,7 +57332,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1284491345}
-  pickUps: 2
 --- !u!58 &1284491348
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -58416,7 +58545,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0.0000038147, y: 0}
   m_SizeDelta: {x: 0.0000076294, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -60235,7 +60364,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1362637763}
-  pickUps: 2
 --- !u!58 &1362637766
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -62568,7 +62696,6 @@ MonoBehaviour:
   slider: {fileID: 1737094562}
   sliderText: {fileID: 485710543}
   pickUp: {fileID: 1412285414}
-  pickUps: 1
 --- !u!61 &1412285417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68155,7 +68282,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1577875733}
-  pickUps: 2
 --- !u!58 &1577875736
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -68414,7 +68540,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1585794380}
-  pickUps: 2
 --- !u!58 &1585794383
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -68722,7 +68847,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1595098789
 GameObject:
@@ -70399,7 +70524,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1636094248
 GameObject:
@@ -71793,7 +71918,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1661255781}
-  pickUps: 2
 --- !u!58 &1661255784
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -72102,7 +72226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
-  player: {fileID: 1674606015}
+  player: {fileID: 0}
 --- !u!1 &1666607807
 GameObject:
   m_ObjectHideFlags: 0
@@ -72380,58 +72504,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
---- !u!1001 &1674606014
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 134022378}
-    m_Modifications:
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -10.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e23de7e3eb02dfd43994761c6750a741, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &1674606015 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1405142770139104, guid: e23de7e3eb02dfd43994761c6750a741,
-    type: 2}
-  m_PrefabInternal: {fileID: 1674606014}
---- !u!4 &1674606016 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4129336954302978, guid: e23de7e3eb02dfd43994761c6750a741,
-    type: 2}
-  m_PrefabInternal: {fileID: 1674606014}
 --- !u!1 &1674608122
 GameObject:
   m_ObjectHideFlags: 0
@@ -72506,7 +72578,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1675155271
 GameObject:
@@ -74198,7 +74270,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1721515180
 GameObject:
@@ -74251,7 +74323,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1721515180}
-  pickUps: 2
 --- !u!58 &1721515183
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -74522,7 +74593,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1723976894}
-  pickUps: 2
 --- !u!58 &1723976897
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -74855,7 +74925,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1733142395
 GameObject:
@@ -76220,7 +76290,6 @@ MonoBehaviour:
   slider: {fileID: 881299242}
   sliderText: {fileID: 1298967353}
   pickUp: {fileID: 1768788864}
-  pickUps: 2
 --- !u!58 &1768788867
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -85408,7 +85477,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

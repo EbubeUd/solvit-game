@@ -18,17 +18,15 @@ namespace Assets.Scripts
 
         public CharacterController2D controller;
 
-        //public GameObject mainCamera;
-
         public SpriteRenderer render;
-        
+
         public float runSpeed = 50f;
         public float horizontalMove = 0;
 
         int easy;
         int medium;
         int hard;
-        
+
         private bool jump = false;
         public bool crouch = false;
         public bool climb = false;
@@ -48,6 +46,7 @@ namespace Assets.Scripts
 
         public float[] reshuffledOptions;
 
+        public GameObject playerRoot;
         public GameObject player;
         public GameObject emptyGameObject;
 
@@ -59,13 +58,14 @@ namespace Assets.Scripts
         public static int level;
         public static int maxAnswerInput = 2;
         public static int highScore;
+        public static int scene;
 
         public Rigidbody2D rigidBody;
-        
+
         public static float answer;
 
         public List<string> Operators;
- 
+
         public EnumBase.AnimationMode animationMode;
         public EnumBase.Pickups getPickUps;
         //public static EnumBase.GameChoice gameChoice;
@@ -74,14 +74,10 @@ namespace Assets.Scripts
 
         public void Awake()
         {
-            if (instance != null)
-            {
-                Destroy(gameObject);
-            }
-            else
+            if (instance == null)
             {
                 instance = this;
-                DontDestroyOnLoad(gameObject);
+                scene = SceneManager.GetActiveScene().buildIndex;
             }
         }
 
@@ -107,7 +103,7 @@ namespace Assets.Scripts
                 {
                     return;
                 }
-                jump = true;
+                jump = true; ;
                 animator.SetBool("Jump", jump);
             }
 
@@ -143,7 +139,6 @@ namespace Assets.Scripts
             }
 
             OnCollisionEnter2D(gameObstacle);
-            
         }
 
         public void OnLanding()
@@ -167,7 +162,7 @@ namespace Assets.Scripts
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream mathsFile = File.Create(Application.persistentDataPath + "/PlayerMathsInfo.dat");
-                
+
 
             PlayerData data = new PlayerData();
             data.highScore = highScore;
@@ -190,7 +185,7 @@ namespace Assets.Scripts
 
         public void SaveGameState()
         {
-            
+
             if (File.Exists(Application.persistentDataPath + "/GameModel.dat"))
             {
                 BinaryFormatter saveGameState = new BinaryFormatter();
@@ -218,7 +213,7 @@ namespace Assets.Scripts
                 levelData.highScore = highScore;
                 levelData.level = level;
                 gameFile.Close();
-             
+
                 SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
             }
         }
@@ -238,7 +233,7 @@ namespace Assets.Scripts
                 difficulties = data.difficulties;
                 SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
             }
-            else if (File.Exists(Application.persistentDataPath + "/PlayerPuzzleInfo.dat")) 
+            else if (File.Exists(Application.persistentDataPath + "/PlayerPuzzleInfo.dat"))
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 FileStream file = File.Open(Application.persistentDataPath + "/PlayerPuzzleInfo.dat", FileMode.Open);
@@ -253,10 +248,10 @@ namespace Assets.Scripts
         }
 
         private void OnTriggerEnter2D(Collider2D other)
-        { 
-           // collect coin or token
+        {
+            // collect coin or token
             if (other.gameObject.CompareTag("Coin") || other.gameObject.CompareTag("Token"))
-            {              
+            {
                 CoinManager coinManager = other.gameObject.GetComponent<CoinManager>();
                 coinManager.CollectCoin();
                 CheckNumberOfPickupsCollected();
@@ -288,10 +283,11 @@ namespace Assets.Scripts
 
         public void CheckNumberOfPickupsCollected()
         {
-            if (CoinManager.totalNumberOfPickupsCollected == UIManager.instance.currentLevelTotalNumberOfPickups)
+            if (CoinManager.totalNumberOfPickupsCollected == CurrentLevelNumberOfPickups.instance.currentLevelTotalNumberOfPickups)
             {
                 AudioManager.instance.backgroundMusic.Stop();
                 StartCoroutine(DisplayGameFinishPanel());
+                //UIManager.instance.ResetPickupPanel();
             }
         }
 
@@ -308,7 +304,7 @@ namespace Assets.Scripts
             UIManager.instance.GameFinishPanel.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             UIManager.instance.starLeft.SetActive(true);
-            
+
             yield return new WaitForSeconds(0.5f);
             UIManager.instance.starCenter.SetActive(true);
             yield return new WaitForSeconds(0.5f);
@@ -331,23 +327,23 @@ namespace Assets.Scripts
         {
             highScore += 5;
             PlayerPrefs.SetInt("HighScore", highScore);
-            UIManager.instance.correctTtext.SetActive(false);
-            UIManager.instance.questionPanel.SetActive(false);
-            UIManager.instance.correctPanel.SetActive(true);
+            QuestionDisplayer.instance.correctTtext.SetActive(false);
+            QuestionDisplayer.instance.questionPanel.SetActive(false);
+            QuestionDisplayer.instance.correctPanel.SetActive(true);
             yield return new WaitForSeconds(0.1f);
-            UIManager.instance.correctTtext.SetActive(true);
+            QuestionDisplayer.instance.correctTtext.SetActive(true);
             yield return new WaitForSeconds(0.5f);
-            UIManager.instance.correctTtext.SetActive(false);
+            QuestionDisplayer.instance.correctTtext.SetActive(false);
             yield return new WaitForSeconds(0.3f);
-            UIManager.instance.correctTtext.SetActive(true);
-            UIManager.instance.inCorrectPanel.SetActive(false);
-            UIManager.instance.panel.SetActive(false);
+            QuestionDisplayer.instance.correctTtext.SetActive(true);
+            QuestionDisplayer.instance.inCorrectPanel.SetActive(false);
+            QuestionDisplayer.instance.panel.SetActive(false);
 
             yield return new WaitForSeconds(0.3f);
-            StartCoroutine(TransportPlayer(0.1f, 0.2f));          
-            UIManager.instance.questionBackground.SetActive(false);
+            StartCoroutine(TransportPlayer(0.1f, 0.2f));
+            QuestionDisplayer.instance.questionBackground.SetActive(false);
             UIManager.instance.door.SetActive(false);
-            UIManager.instance.correctPanel.SetActive(false);
+            QuestionDisplayer.instance.correctPanel.SetActive(false);
             runSpeed = 50f;
             EnnemyManager.speed = 5.0f;
             canJump = true;
@@ -358,13 +354,13 @@ namespace Assets.Scripts
 
         public IEnumerator InCorrectAnswer()
         {
-            UIManager.instance.inCorrectPanel.SetActive(true);
-            UIManager.instance.questionPanel.SetActive(false);
-            UIManager.instance.correctPanel.SetActive(false);
+            QuestionDisplayer.instance.inCorrectPanel.SetActive(true);
+            QuestionDisplayer.instance.questionPanel.SetActive(false);
+            QuestionDisplayer.instance.correctPanel.SetActive(false);
 
             yield return new WaitForSeconds(1);
-            UIManager.instance.inCorrectPanel.SetActive(false);
-            UIManager.instance.questionPanel.SetActive(true);
+            QuestionDisplayer.instance.inCorrectPanel.SetActive(false);
+            QuestionDisplayer.instance.questionPanel.SetActive(true);
         }
 
         private IEnumerator OnCollisionEnter2D(Collision2D obstacle)
@@ -374,7 +370,7 @@ namespace Assets.Scripts
             {
                 canJump = false;
                 runSpeed = 0f;
-                UIManager.instance.questionHeader.text = "UNLOCK THE DOOR";
+                QuestionDisplayer.instance.questionHeader.SetActive(true);
                 ShowQuestion();
                 UIManager.instance.door = obstacle.gameObject;
             }
@@ -384,7 +380,7 @@ namespace Assets.Scripts
             //    canJump = false;
             //    runSpeed = 0f;
             //    UIManager.instance.door = obstacle.gameObject;
-                
+
             //    PuzzleData puzzldeData = PuzzleManager.instance.GetPuzzleQuestion(difficulties, level);
             //    PuzzleManager.instance.AssignPuzzleData(puzzldeData);
             //    AssignPuzzleButtons();
@@ -446,7 +442,7 @@ namespace Assets.Scripts
 
         public IEnumerator WhenPlayerIsHurt()
         {
-           
+
             canJump = false;
             canClimb = false;
             //animator.SetBool("Climb", climb);
@@ -457,7 +453,7 @@ namespace Assets.Scripts
             animator.SetBool("Hurt", hurt);
             yield return new WaitForSeconds(1);
             //animator.SetBool("Hurt", false);
-            UIManager.instance.questionHeader.text = "SOLVE TO CONTINUE";
+            QuestionDisplayer.instance.questionHeader.SetActive(true);
             ShowQuestion();
         }
 
@@ -490,85 +486,24 @@ namespace Assets.Scripts
             }
         }
 
-        public IEnumerator OnCorrectPuzzleAnswer()
-        {
-            highScore += 5;
-            PlayerPrefs.SetInt("HighScore", highScore);
-            UIManager.instance.correctPuzzleText.SetActive(false);
-            UIManager.instance.puzzleQuestionPanel.SetActive(false);
-            UIManager.instance.puzzleCorrectPanel.SetActive(true);
-            yield return new WaitForSeconds(0.1f);
-            UIManager.instance.correctPuzzleText.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            UIManager.instance.correctPuzzleText.SetActive(false);
-            yield return new WaitForSeconds(0.3f);
-            UIManager.instance.correctPuzzleText.SetActive(true);
-            UIManager.instance.puzzleIncorrectPanel.SetActive(false);
-            UIManager.instance.panel.SetActive(false);
-
-            yield return new WaitForSeconds(0.3f);
-            UIManager.instance.puzzleQuestionBackground.SetActive(false);
-            UIManager.instance.door.SetActive(false);
-            UIManager.instance.puzzleCorrectPanel.SetActive(false);
-            runSpeed = 50f;
-            EnnemyManager.speed = 5.0f;
-            canJump = true;
-            canClimb = true;
-            animator.SetBool("Hurt", false);
-            StartCoroutine(TransportPlayer(0.1f, 0.2f));
-        }
-
-        public IEnumerator OnIncorrectPuzzleAnswer()
-        {
-            UIManager.instance.puzzleIncorrectPanel.SetActive(true);
-            UIManager.instance.puzzleQuestionPanel.SetActive(false);
-            UIManager.instance.puzzleCorrectPanel.SetActive(false);
-            
-            yield return new WaitForSeconds(1);
-            UIManager.instance.puzzleIncorrectPanel.SetActive(false);
-            UIManager.instance.puzzleQuestionPanel.SetActive(true);
-        }
-
-        public void ShowPuzzleExplanation()
-        {
-            UIManager.instance.innerPuzzlePanel.SetActive(false);
-            UIManager.instance.explanationHeader.text = "Explanation:";
-        }
-
-        public void ClosePuzzlePanel()
-        {
-            UIManager.instance.puzzleQuestionBackground.SetActive(false);
-            runSpeed = 50f;
-            EnnemyManager.speed = 5.0f;
-            canJump = true;
-            canClimb = true;
-            animator.SetBool("Hurt", false);
-        }
-
-        public void GoBackToPuzzlePanel()
-        {
-            UIManager.instance.explanationHeader.text = "UNLOCK THE DOOR";
-            UIManager.instance.innerPuzzlePanel.SetActive(true);
-        }
-
         public void ShowQuestion()
         {
-           
+
             canJump = false;
-            UIManager.instance.questionPanel.SetActive(true);
-            UIManager.instance.panel.SetActive(true);
-            UIManager.instance.questionBackground.SetActive(true);
-            UIManager.instance.OptionBtn1.onClick.RemoveAllListeners();
-            UIManager.instance.OptionBtn2.onClick.RemoveAllListeners();
-            UIManager.instance.OptionBtn3.onClick.RemoveAllListeners();
+            QuestionDisplayer.instance.questionPanel.SetActive(true);
+            QuestionDisplayer.instance.panel.SetActive(true);
+            QuestionDisplayer.instance.questionBackground.SetActive(true);
+            QuestionDisplayer.instance.OptionBtn1.onClick.RemoveAllListeners();
+            QuestionDisplayer.instance.OptionBtn2.onClick.RemoveAllListeners();
+            QuestionDisplayer.instance.OptionBtn3.onClick.RemoveAllListeners();
             LevelModel model = LevelController.LevelDifficulty(difficulties, level);
             List<string> getOperator = GetOperator();
 
-            List <int> values = GenerateRandomNumbers(getOperator);
+            List<int> values = GenerateRandomNumbers(getOperator);
 
-            List<float>floatValues = convertIntegersTofloat(values);
+            List<float> floatValues = convertIntegersTofloat(values);
 
-            UIManager.instance.question.text = DataLogic.GenerateQuestionString(values,getOperator);
+            QuestionDisplayer.instance.question.text = DataLogic.GenerateQuestionString(values, getOperator);
             answer = GetCorrectAnswer(floatValues, getOperator);
             AssignButtonEvents();
         }
@@ -579,12 +514,12 @@ namespace Assets.Scripts
             System.Random rnd = new System.Random();
 
             //Populate List
-            
-           
+
+
             model = LevelController.LevelDifficulty(difficulties, level);
             //values[0] = 2 * rnd.Next(model.minNumber / 2, model.maxNUmber / 2);
-            
-            for(int i = 0; i < model.operatorIndex; i++)
+
+            for (int i = 0; i < model.operatorIndex; i++)
             {
                 values.Add(0);
                 values[i] = rnd.Next(model.minNumber, model.maxNUmber);
@@ -594,9 +529,9 @@ namespace Assets.Scripts
             for (int i = 0; i < model.operatorIndex; i++)
             {
 
-                if(operatorValue[i] == "/")
+                if (operatorValue[i] == "/")
                 {
-                    values[i+1] = GetDivisibleNumber(values[i], model.minNumber);
+                    values[i + 1] = GetDivisibleNumber(values[i], model.minNumber);
                 }
 
                 values[i + 1] = rnd.Next(model.minNumber, model.maxNUmber);
@@ -610,19 +545,20 @@ namespace Assets.Scripts
             int min = minNumber;
             if (minNumber <= 2) min = 3;
 
-            for(int i = min; i <= NumberToCheck; i++)
+            for (int i = min; i <= NumberToCheck; i++)
             {
                 if ((NumberToCheck % i) == 0) return i;
-            }            return NumberToCheck;
-           
+            }
+            return NumberToCheck;
+
         }
 
 
-        
+
         //returns a random operator
         public List<string> GetOperator()
         {
-             model = LevelController.LevelDifficulty(difficulties, level);
+            model = LevelController.LevelDifficulty(difficulties, level);
             int operatorCount = model.operators.Count;
 
 
@@ -633,7 +569,7 @@ namespace Assets.Scripts
                 int index = rnd.Next(operatorCount);
                 operatorInUse.Add(model.operators[index]);
             }
-            
+
 
             return operatorInUse;
         }
@@ -642,9 +578,10 @@ namespace Assets.Scripts
         public float GetCorrectAnswer(List<float> values, List<string> OperatorInUse)
         {
             float ans = 0;
-            
-            for(int i = 0; i < OperatorInUse.Count(); i++) { 
-                if(OperatorInUse[i] == "/")
+
+            for (int i = 0; i < OperatorInUse.Count(); i++)
+            {
+                if (OperatorInUse[i] == "/")
                 {
                     ans = values[i] / values[i + 1];
                     values[i] = ans;
@@ -653,8 +590,8 @@ namespace Assets.Scripts
                     if (i >= 0) i--;
                 }
             }
-            
-            for(int i = 0; i < OperatorInUse.Count; i++)
+
+            for (int i = 0; i < OperatorInUse.Count; i++)
             {
                 if (OperatorInUse[i] == "*")
                 {
@@ -666,11 +603,11 @@ namespace Assets.Scripts
                     {
                         i--;
                     }
-                   
+
                 }
             }
 
-            for(int i = 0; i< OperatorInUse.Count; i++)
+            for (int i = 0; i < OperatorInUse.Count; i++)
             {
                 if (OperatorInUse[i] == "+")
                 {
@@ -709,7 +646,7 @@ namespace Assets.Scripts
                 StartCoroutine(InCorrectAnswer());
                 if (maxAnswerInput == 0)
                 {
-                    UIManager.instance.questionBackground.SetActive(false);
+                    QuestionDisplayer.instance.questionBackground.SetActive(false);
                     UIManager.instance.gameOverHighScore.text = "Total Score : " + highScore;
                     UIManager.instance.SetGameOverPanelTrue();
                     UIManager.instance.sound.PlayOneShot(AudioManager.instance.gameoverSound);
@@ -726,7 +663,7 @@ namespace Assets.Scripts
         //public void IncorrectPuzzleCoroutine()
         //{
         //    maxAnswerInput--;
-            
+
         //    if (maxAnswerInput == 0)
         //    {
         //        UIManager.instance.puzzleQuestionBackground.SetActive(false);
@@ -740,7 +677,7 @@ namespace Assets.Scripts
         //        StartCoroutine(OnIncorrectPuzzleAnswer());
         //    }
         //}
-        
+
 
 
         //public void checkPuzzleAnswer(string answer)
@@ -763,7 +700,7 @@ namespace Assets.Scripts
         //        }              
         //    }
         //}
-        
+
 
         //public void AssignPuzzleButtons()
         //{
@@ -800,7 +737,7 @@ namespace Assets.Scripts
             //check if the answer has a decimal point and then give other options a decimal point as well
             if ((answer / (int)answer) != 0)
             {
-                // Let the max generated number be 40, then add decimals to it.
+                // The options should be in the same range as the answer
                 option1 = answer + rand.Next(-5, 5);
                 option2 = answer + rand.Next(-5, 5);
 
@@ -809,7 +746,7 @@ namespace Assets.Scripts
             }
             else
             {
-                // Let the max generated number be 90 if there are no decimals
+                // The options should be in the same range as the answer
                 option1 = answer + rand.Next(-10, 10);
                 option2 = answer + rand.Next(-10, 10);
             }
@@ -832,14 +769,14 @@ namespace Assets.Scripts
             //shuffle the answers
             reshuffledOptions = options.OrderBy(x => rand.Next()).ToArray();
 
-            UIManager.instance.OptionBtn1.GetComponentInChildren<Text>().text = reshuffledOptions[0].ToString();
-            UIManager.instance.OptionBtn2.GetComponentInChildren<Text>().text = reshuffledOptions[1].ToString();
-            UIManager.instance.OptionBtn3.GetComponentInChildren<Text>().text = reshuffledOptions[2].ToString();
+            QuestionDisplayer.instance.OptionBtn1.GetComponentInChildren<Text>().text = reshuffledOptions[0].ToString();
+            QuestionDisplayer.instance.OptionBtn2.GetComponentInChildren<Text>().text = reshuffledOptions[1].ToString();
+            QuestionDisplayer.instance.OptionBtn3.GetComponentInChildren<Text>().text = reshuffledOptions[2].ToString();
 
-            UIManager.instance.OptionBtn1.onClick.AddListener(delegate { CheckSolution(reshuffledOptions[0]); });
-            UIManager.instance.OptionBtn2.onClick.AddListener(delegate { CheckSolution(reshuffledOptions[1]); });
-            UIManager.instance.OptionBtn3.onClick.AddListener(delegate { CheckSolution(reshuffledOptions[2]); });
-        
+            QuestionDisplayer.instance.OptionBtn1.onClick.AddListener(delegate { CheckSolution(reshuffledOptions[0]); });
+            QuestionDisplayer.instance.OptionBtn2.onClick.AddListener(delegate { CheckSolution(reshuffledOptions[1]); });
+            QuestionDisplayer.instance.OptionBtn3.onClick.AddListener(delegate { CheckSolution(reshuffledOptions[2]); });
+
         }
 
         List<float> convertIntegersTofloat(List<int> integers)

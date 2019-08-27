@@ -8,6 +8,7 @@ namespace Assets.Scripts
 {
     class TimeManager : MonoBehaviour
     {
+        public static TimeManager instance;
         UIManager iManager;
         public Text timerText;
         public static float countDownTime = 299;
@@ -17,7 +18,15 @@ namespace Assets.Scripts
             StartCoroutine(CountDown());
             iManager = GetComponent<UIManager>();
         }
-        
+
+        public void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+        }
+
         public IEnumerator CountDown()
         {
             while (true)
@@ -36,6 +45,13 @@ namespace Assets.Scripts
                     UIManager.instance.SetGameOverPanelTrue();
                     UIManager.instance.sound.PlayOneShot(AudioManager.instance.gameoverSound);
                     yield break;                   
+                }
+
+                // Stop TimeCount on Game finish
+                if (CoinManager.totalNumberOfPickupsCollected == CurrentLevelNumberOfPickups.instance.currentLevelTotalNumberOfPickups)
+                {
+                    StopCoroutine(CountDown());
+                    yield break;
                 }
             }
         }
