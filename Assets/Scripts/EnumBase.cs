@@ -16,9 +16,16 @@ using System.Text;
         jumping = 4
     }
 
-    public enum Enemies
+    public enum Layers
     {
-
+        Default = 0,
+        Transparent = 1,
+        IgnoreRayCast = 2,
+        Water = 4,
+        UI = 5, 
+        Player= 8,
+        Ground = 9,
+        Spike = 10
     }
 
     public enum Pickups
@@ -103,3 +110,4 @@ public class LevelModel
     public int maxNUmber;
     public int operatorIndex;
 }
+

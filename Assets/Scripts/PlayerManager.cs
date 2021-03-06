@@ -14,6 +14,9 @@ namespace Assets.Scripts
 {
     public class PlayerManager : MonoBehaviour
     {
+ 
+        public GameObject ThinkEffect;
+
         public static PlayerManager instance;
 
         public CharacterController2D controller;
@@ -103,7 +106,7 @@ namespace Assets.Scripts
                 {
                     return;
                 }
-                jump = true; ;
+                jump = true; 
                 animator.SetBool("Jump", jump);
             }
 
@@ -144,6 +147,7 @@ namespace Assets.Scripts
         public void OnLanding()
         {
             animator.SetBool("Jump", false);
+    
         }
 
         public void OnCrouching(bool crouch)
@@ -155,6 +159,7 @@ namespace Assets.Scripts
         {
             controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
             jump = false;
+            
         }
 
         //Saves the current game state the player is in before exiting the game
@@ -437,7 +442,6 @@ namespace Assets.Scripts
                 player.transform.parent = GameObject.Find("Parent").transform;
             }
         }
-
 
 
         public IEnumerator WhenPlayerIsHurt()
